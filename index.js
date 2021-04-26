@@ -77,7 +77,7 @@ app.get('/users/delete/:id', async(req, res) => {
 // Account types
 app.get('/account_types', async(req, res) => {
     try{
-        let results = await AccountTypes.findAll({raw:true});
+        let results = await AccountTypes.findAll({raw:true, order: [['id', 'ASC']]});
         res.render("account_types", {account_types: results});
     }catch(error){
         console.log(error);
