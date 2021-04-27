@@ -18,7 +18,7 @@ module.exports = {
     "dialect": "mysql"
   },
   "production": {
-    use_env_variable: 'DB_URL_AWS',
+    use_env_variable: 'DATABASE_URL',
     dialectOptions: {
       ssl:{
         require: true,
